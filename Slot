@@ -5,8 +5,7 @@ from random import randint
 balants = int(input())
 sum_stav = int(input())
 kol_stavok = int(input())
-# Не забыть реализовать !!! Спомошью функцыи randint  сделать что бы случайное число с диапозоном от 0 до 20 ..
-# если число делится на 2 то віпадает решка ..ели нет орел .. и пусть пользователь ставит .. на орла или решку
+
 def Game(randint, balants, sum_stav, kol_stavok):
     d = [[], [], [], [], []]
     d1 = [[], [], [], [], []]
