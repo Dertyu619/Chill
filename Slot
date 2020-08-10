@@ -1,12 +1,12 @@
-import random
-from random import sample
 from random import randint
 
+g = 0
 balants = int(input())
-sum_stav = int(input())
-kol_stavok = int(input())
 
-def Game(randint, balants, sum_stav, kol_stavok):
+def Game( g, balants ):
+    sum_stav = int(input())
+    kol_stavok = int(input())
+
     d = [[], [], [], [], []]
     d1 = [[], [], [], [], []]
     d2 = [[], [], [], [], []]
@@ -30,9 +30,10 @@ def Game(randint, balants, sum_stav, kol_stavok):
         d2[3] = randint(1, 3)
         d2[4] = randint(1, 3)
         #################################################################0
-        if d[0] == 3 and d[1] == 3 and d[2] == 3 and kol_stavok >= 0:#d d d
+        if d[0] == 3 and d[1] == 3 and d[2] == 3 and kol_stavok >= 0:  # d d d
             kol_stavok -= 1
             balants += sum_stav * 15
+            g += sum_stav * 15##################
             print("You Vin")
 
             print(d[0], d[1], d[2], d[3], d[4])
@@ -41,290 +42,327 @@ def Game(randint, balants, sum_stav, kol_stavok):
 
             print(kol_stavok)
             print(balants)
-        if d1[0] == 3 and d[1] == 3 and d[2] == 3 and kol_stavok >= 0:#d1 d d
-                kol_stavok -= 1
-                balants += sum_stav * 15
-                print("You Vin")
+        if d1[0] == 3 and d[1] == 3 and d[2] == 3 and kol_stavok >= 0:  # d1 d d
+            kol_stavok -= 1
+            balants += sum_stav * 5
+            g += sum_stav * 5  ##################
+            print("You Vin")
 
-                print(d[0], d[1], d[2], d[3], d[4])
-                print(d1[0], d1[1], d1[2], d1[3], d1[4])
-                print(d2[0], d2[1], d2[2], d2[3], d2[4])
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
 
-                print(kol_stavok)
+            print(kol_stavok)
+            print(balants)
+        #################################################################0
+        elif d[0] == 3 and d[1] == 3 and d[2] == 3 and d[3] == 3 and kol_stavok >= 0:  # d d d d
+            kol_stavok -= 1
+            balants += sum_stav * 15
+            g += sum_stav * 15  ##################
+            print("You Vin")
+
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
+
+            print(kol_stavok)
+            print(balants)
+        elif d1[0] == 3 and d[1] == 3 and d[2] == 3 and d[3] == 3 and kol_stavok >= 0:  # d1 d d d
+            kol_stavok -= 1
+            balants += sum_stav * 15
+            g += sum_stav * 15  ##################
+            print("You Vin")
+
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
+
+            print(kol_stavok)
+            print(balants)
+        #################################################################0
+        elif d[0] == 3 and d[1] == 3 and d[2] == 3 and d[3] == 3 and d[4] == 3 and kol_stavok >= 0:  # d d d d d
+            kol_stavok -= 1
+            balants += sum_stav * 45
+            g += sum_stav * 45  ##################
+            print("You Vin")
+
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
+
+            print(kol_stavok)
+            print(balants)
+        elif d1[0] == 3 and d[1] == 3 and d[2] == 3 and d[3] == 3 and d[4] == 3 and kol_stavok >= 0:  # d1 d d d d
+            kol_stavok -= 1
+            balants += sum_stav * 45
+            g += sum_stav * 45  ##################
+            print("You Vin")
+
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
+
+            print(kol_stavok)
+            print(balants)
+        elif d1[0] == 3 and d[1] == 3 and d[2] == 3 and d[3] == 3 and d1[4] == 3 and kol_stavok >= 0:  # d1 d d d d1
+            kol_stavok -= 1
+            balants += sum_stav * 45
+            g += sum_stav * 45  ##################
+            print("You Vin")
+
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
+
+            print(kol_stavok)
+            print(balants)
+        #################################################################
+        #################################################################
+        #################################################################
+        elif d1[0] == 3 and d1[1] == 3 and d1[2] == 3 and kol_stavok >= 0:  # d1 d1 d1
+            kol_stavok -= 1
+            balants += sum_stav * 5
+            g += sum_stav * 5  ##################
+            print("You Vin")
+
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
+
+            print(kol_stavok)
+            print(balants)
+        elif d[0] == 3 and d1[1] == 3 and d1[2] == 3 and kol_stavok >= 0:  # d d1 d1
+            kol_stavok -= 1
+            balants += sum_stav * 5
+            g += sum_stav * 5  ##################
+            print("You Vin")
+
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
+
+            print(kol_stavok)
+            print(balants)
+        elif d2[0] == 3 and d1[1] == 3 and d1[2] == 3 and kol_stavok >= 0:  # d2  d1 d1
+            kol_stavok -= 1
+            balants += sum_stav * 5
+            g += sum_stav * 5  ##################
+            print("You Vin")
+
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
+
+            print(kol_stavok)
+            print(balants)
+        #################################################################1
+        elif d1[0] == 3 and d1[1] == 3 and d1[2] == 3 and d1[3] == 3 and kol_stavok >= 0:  # d1 d1 d1 d1
+            kol_stavok -= 1
+            balants += sum_stav * 15
+            g += sum_stav * 15  ##################
+            print("You Vin")
+
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
+
+            print(kol_stavok)
+            print(balants)
+        elif d[0] == 3 and d1[1] == 3 and d1[2] == 3 and d1[3] == 3 and kol_stavok >= 0:  # d d1 d1 d1 d1
+            kol_stavok -= 1
+            balants += sum_stav * 15
+            g += sum_stav * 15  ##################
+            print("You Vin")
+
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
+
+            print(kol_stavok)
+            print(balants)
+        elif d2[0] == 3 and d1[1] == 3 and d1[2] == 3 and d1[3] == 3 and kol_stavok >= 0:  # d2 d1 d1 d1
+            kol_stavok -= 1
+            balants += sum_stav * 15
+            g += sum_stav * 15  ##################
+            print("You Vin")
+
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
+
+            print(kol_stavok)
+            print(balants)
+        #################################################################1
+        elif d1[0] == 3 and d1[1] == 3 and d1[2] == 3 and d1[3] == 3 and d1[
+            4] == 3 and kol_stavok >= 0:  # d1 d1 d1 d1 d1
+            kol_stavok -= 1
+            balants += sum_stav * 45
+            g += sum_stav * 45  ##################
+            print("You Vin")
+
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
+
+            print(kol_stavok)
+            print(balants)
+        elif d[0] == 3 and d1[1] == 3 and d1[2] == 3 and d1[3] == 3 and d1[4] == 3 and kol_stavok >= 0:  # d d1 d1 d1 d1
+            kol_stavok -= 1
+            balants += sum_stav * 45
+            g += sum_stav * 45  ##################
+            print("You Vin")
+
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
+
+            print(kol_stavok)
+            print(balants)
+        elif d[0] == 3 and d1[1] == 3 and d1[2] == 3 and d1[3] == 3 and d[4] == 3 and kol_stavok >= 0:  # d d1 d1 d1 d
+            kol_stavok -= 1
+            balants += sum_stav * 45
+            g += sum_stav * 45  ##################
+            print("You Vin")
+
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
+
+            print(kol_stavok)
+            print(balants)
+        elif d2[0] == 3 and d1[1] == 3 and d1[2] == 3 and d1[3] == 3 and d1[
+            4] == 3 and kol_stavok >= 0:  # d2 d1 d1 d1 d1
+            kol_stavok -= 1
+            balants += sum_stav * 45
+            g += sum_stav * 45  ##################
+            print("You Vin")
+
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
+
+            print(kol_stavok)
+            print(balants)
+        elif d2[0] == 3 and d1[1] == 3 and d1[2] == 3 and d1[3] == 3 and d2[
+            4] == 3 and kol_stavok >= 0:  # d2 d1 d1 d1 d2
+            kol_stavok -= 1
+            balants += sum_stav * 45
+            g += sum_stav * 45  ##################
+            print("You Vin")
+
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
+
+            print(kol_stavok)
+            print(balants)
+        #################################################################
+        #################################################################
+        #################################################################
+        elif d2[0] == 3 and d2[1] == 3 and d2[2] == 3 and kol_stavok >= 0:  # d2 d2 d2
+            kol_stavok -= 1
+            balants += sum_stav * 5
+            g += sum_stav * 5  ##################
+            print("You Vin")
+
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
+
+            print(kol_stavok)
+            print(balants)
+
+        elif d1[0] == 3 and d2[1] == 3 and d2[2] == 3 and kol_stavok >= 0:  # d1 d2 d2
+            kol_stavok -= 1
+            balants += sum_stav * 5
+            g += sum_stav * 5  ##################
+            print("You Vin")
+
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
+
+            print(kol_stavok)
+            print(balants)
+        #################################################################2
+        elif d2[0] == 3 and d2[1] == 3 and d2[2] == 3 and d2[3] == 3 and kol_stavok >= 0:  # d2 d2 d2 d2
+            kol_stavok -= 1
+            balants += sum_stav * 15
+            g += sum_stav * 15  ##################
+            print("You Vin")
+
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
+
+            print(kol_stavok)
+            print(balants)
+        elif d1[0] == 3 and d2[1] == 3 and d2[2] == 3 and d2[3] == 3 and kol_stavok >= 0:  # d1 d2 d2 d2
+            kol_stavok -= 1
+            balants += sum_stav * 15
+            g += sum_stav * 15  ##################
+            print("You Vin")
+
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
+
+            print(kol_stavok)
+            print(balants)
+        #################################################################2
+        elif d2[0] == 3 and d2[1] == 3 and d2[2] == 3 and d2[3] == 3 and d2[4] == 3 and kol_stavok >= 0:  # d2 d2 d2 d2 d2
+            kol_stavok -= 1
+            balants += sum_stav * 45
+            g += sum_stav * 45  ##################
+            print("You Vin")
+
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
+
+            print(kol_stavok)
+            print(balants)
+        elif d1[0] == 3 and d2[1] == 3 and d2[2] == 3 and d2[3] == 3 and d2[
+            4] == 3 and kol_stavok >= 0:  # d1 d2 d2 d2 d2
+            kol_stavok -= 1
+            balants += sum_stav * 45
+            g += sum_stav * 45  ##################
+            print("You Vin")
+
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
+
+            print(kol_stavok)
+            print(balants)
+        elif d1[0] == 3 and d2[1] == 3 and d2[2] == 3 and d2[3] == 3 and d1[
+            4] == 3 and kol_stavok >= 0:  # d1 d2 d2 d2 d1
+            kol_stavok -= 1
+            balants += sum_stav * 45
+            g += sum_stav * 45  ##################
+            print("You Vin")
+
+            print(d[0], d[1], d[2], d[3], d[4])
+            print(d1[0], d1[1], d1[2], d1[3], d1[4])
+            print(d2[0], d2[1], d2[2], d2[3], d2[4])
+
+            print(kol_stavok)
+            print(balants)
+        #################################################################
+        #################################################################
+        #################################################################
+        elif g != 0 and g >= sum_stav and kol_stavok == 0 or kol_stavok <= 0:
+            e1 = input("Hotite sigrat -")
+            if e1 == "Da":
+                Game(g, balants)
+            elif e1 == "No":
                 print(balants)
-        #################################################################0
-        elif d[0] == 3 and d[1] == 3 and d[2] == 3 and d[3] == 3 and kol_stavok >= 0:#d d d d
-            kol_stavok -= 1
-            balants += sum_stav * 45
-            print("You Vin")
 
-            print(d[0], d[1], d[2], d[3], d[4])
-            print(d1[0], d1[1], d1[2], d1[3], d1[4])
-            print(d2[0], d2[1], d2[2], d2[3], d2[4])
-
-            print(kol_stavok)
-            print(balants)
-        elif d1[0] == 3 and d[1] == 3 and d[2] == 3 and d[3] == 3 and kol_stavok >= 0:#d1 d d d
-            kol_stavok -= 1
-            balants += sum_stav * 45
-            print("You Vin")
-
-            print(d[0], d[1], d[2], d[3], d[4])
-            print(d1[0], d1[1], d1[2], d1[3], d1[4])
-            print(d2[0], d2[1], d2[2], d2[3], d2[4])
-
-            print(kol_stavok)
-            print(balants)
-        #################################################################0
-        elif d[0] == 3 and d[1] == 3 and d[2] == 3 and d[3] == 3 and d[4] == 3 and kol_stavok >= 0:#d d d d d
-            kol_stavok -= 1
-            balants += sum_stav * 100
-            print("You Vin")
-
-            print(d[0], d[1], d[2], d[3], d[4])
-            print(d1[0], d1[1], d1[2], d1[3], d1[4])
-            print(d2[0], d2[1], d2[2], d2[3], d2[4])
-
-            print(kol_stavok)
-            print(balants)
-        elif d1[0] == 3 and d[1] == 3 and d[2] == 3 and d[3] == 3 and d[4] == 3 and kol_stavok >= 0:#d1 d d d d
-            kol_stavok -= 1
-            balants += sum_stav * 100
-            print("You Vin")
-
-            print(d[0], d[1], d[2], d[3], d[4])
-            print(d1[0], d1[1], d1[2], d1[3], d1[4])
-            print(d2[0], d2[1], d2[2], d2[3], d2[4])
-
-            print(kol_stavok)
-            print(balants)
-        elif d1[0] == 3 and d[1] == 3 and d[2] == 3 and d[3] == 3 and d1[4] == 3 and kol_stavok >= 0:#d1 d d d d1
-            kol_stavok -= 1
-            balants += sum_stav * 100
-            print("You Vin")
-
-            print(d[0], d[1], d[2], d[3], d[4])
-            print(d1[0], d1[1], d1[2], d1[3], d1[4])
-            print(d2[0], d2[1], d2[2], d2[3], d2[4])
-
-            print(kol_stavok)
-            print(balants)
-#################################################################
-#################################################################
-#################################################################
-        elif d1[0] == 3 and d1[1] == 3 and d1[2] == 3 and kol_stavok >= 0:#d1 d1 d1
-            kol_stavok -= 1
-            balants += sum_stav * 15
-            print("You Vin")
-
-            print(d[0], d[1], d[2], d[3], d[4])
-            print(d1[0], d1[1], d1[2], d1[3], d1[4])
-            print(d2[0], d2[1], d2[2], d2[3], d2[4])
-
-            print(kol_stavok)
-            print(balants)
-        elif d[0] == 3 and d1[1] == 3 and d1[2] == 3 and kol_stavok >= 0:#d d1 d1
-            kol_stavok -= 1
-            balants += sum_stav * 15
-            print("You Vin")
-
-            print(d[0], d[1], d[2], d[3], d[4])
-            print(d1[0], d1[1], d1[2], d1[3], d1[4])
-            print(d2[0], d2[1], d2[2], d2[3], d2[4])
-
-            print(kol_stavok)
-            print(balants)
-        elif d2[0] == 3 and d1[1] == 3 and d1[2] == 3 and kol_stavok >= 0:#d2  d1 d1
-            kol_stavok -= 1
-            balants += sum_stav * 15
-            print("You Vin")
-
-            print(d[0], d[1], d[2], d[3], d[4])
-            print(d1[0], d1[1], d1[2], d1[3], d1[4])
-            print(d2[0], d2[1], d2[2], d2[3], d2[4])
-
-            print(kol_stavok)
-            print(balants)
-        #################################################################1
-        elif d1[0] == 3 and d1[1] == 3 and d1[2] == 3 and d1[3] == 3 and kol_stavok >= 0:#d1 d1 d1 d1
-            kol_stavok -= 1
-            balants += sum_stav * 45
-            print("You Vin")
-
-            print(d[0], d[1], d[2], d[3], d[4])
-            print(d1[0], d1[1], d1[2], d1[3], d1[4])
-            print(d2[0], d2[1], d2[2], d2[3], d2[4])
-
-            print(kol_stavok)
-            print(balants)
-        elif d[0] == 3 and d1[1] == 3 and d1[2] == 3 and d1[3] == 3 and kol_stavok >= 0:#d d1 d1 d1 d1
-            kol_stavok -= 1
-            balants += sum_stav * 45
-            print("You Vin")
-
-            print(d[0], d[1], d[2], d[3], d[4])
-            print(d1[0], d1[1], d1[2], d1[3], d1[4])
-            print(d2[0], d2[1], d2[2], d2[3], d2[4])
-
-            print(kol_stavok)
-            print(balants)
-        elif d2[0] == 3 and d1[1] == 3 and d1[2] == 3 and d1[3] == 3 and kol_stavok >= 0:#d2 d1 d1 d1
-            kol_stavok -= 1
-            balants += sum_stav * 45
-            print("You Vin")
-
-            print(d[0], d[1], d[2], d[3], d[4])
-            print(d1[0], d1[1], d1[2], d1[3], d1[4])
-            print(d2[0], d2[1], d2[2], d2[3], d2[4])
-
-            print(kol_stavok)
-            print(balants)
-        #################################################################1
-        elif d1[0] == 3 and d1[1] == 3 and d1[2] == 3 and d1[3] == 3 and d1[4] == 3 and kol_stavok >= 0:#d1 d1 d1 d1 d1
-            kol_stavok -= 1
-            balants += sum_stav * 100
-            print("You Vin")
-
-            print(d[0], d[1], d[2], d[3], d[4])
-            print(d1[0], d1[1], d1[2], d1[3], d1[4])
-            print(d2[0], d2[1], d2[2], d2[3], d2[4])
-
-            print(kol_stavok)
-            print(balants)
-        elif d[0] == 3 and d1[1] == 3 and d1[2] == 3 and d1[3] == 3 and d1[4] == 3 and kol_stavok >= 0:#d d1 d1 d1 d1
-            kol_stavok -= 1
-            balants += sum_stav * 100
-            print("You Vin")
-
-            print(d[0], d[1], d[2], d[3], d[4])
-            print(d1[0], d1[1], d1[2], d1[3], d1[4])
-            print(d2[0], d2[1], d2[2], d2[3], d2[4])
-
-            print(kol_stavok)
-            print(balants)
-        elif d[0] == 3 and d1[1] == 3 and d1[2] == 3 and d1[3] == 3 and d[4] == 3 and kol_stavok >= 0:#d d1 d1 d1 d
-            kol_stavok -= 1
-            balants += sum_stav * 100
-            print("You Vin")
-
-            print(d[0], d[1], d[2], d[3], d[4])
-            print(d1[0], d1[1], d1[2], d1[3], d1[4])
-            print(d2[0], d2[1], d2[2], d2[3], d2[4])
-
-            print(kol_stavok)
-            print(balants)
-        elif d2[0] == 3 and d1[1] == 3 and d1[2] == 3 and d1[3] == 3 and d1[4] == 3 and kol_stavok >= 0:#d2 d1 d1 d1 d1
-            kol_stavok -= 1
-            balants += sum_stav * 100
-            print("You Vin")
-
-            print(d[0], d[1], d[2], d[3], d[4])
-            print(d1[0], d1[1], d1[2], d1[3], d1[4])
-            print(d2[0], d2[1], d2[2], d2[3], d2[4])
-
-            print(kol_stavok)
-            print(balants)
-        elif d2[0] == 3 and d1[1] == 3 and d1[2] == 3 and d1[3] == 3 and d2[4] == 3 and kol_stavok >= 0:#d2 d1 d1 d1 d2
-            kol_stavok -= 1
-            balants += sum_stav * 100
-            print("You Vin")
-
-            print(d[0], d[1], d[2], d[3], d[4])
-            print(d1[0], d1[1], d1[2], d1[3], d1[4])
-            print(d2[0], d2[1], d2[2], d2[3], d2[4])
-
-            print(kol_stavok)
-            print(balants)
-#################################################################
-#################################################################
-#################################################################
-        elif d2[0] == 3 and d2[1] == 3 and d2[2] == 3 and kol_stavok >= 0:#d2 d2 d2
-            kol_stavok -= 1
-            balants += sum_stav * 15
-            print("You Vin")
-
-            print(d[0], d[1], d[2], d[3], d[4])
-            print(d1[0], d1[1], d1[2], d1[3], d1[4])
-            print(d2[0], d2[1], d2[2], d2[3], d2[4])
-
-            print(kol_stavok)
-            print(balants)
-
-        elif d1[0] == 3 and d2[1] == 3 and d2[2] == 3 and kol_stavok >= 0:#d1 d2 d2
-            kol_stavok -= 1
-            balants += sum_stav * 15
-            print("You Vin")
-
-            print(d[0], d[1], d[2], d[3], d[4])
-            print(d1[0], d1[1], d1[2], d1[3], d1[4])
-            print(d2[0], d2[1], d2[2], d2[3], d2[4])
-
-            print(kol_stavok)
-            print(balants)
-        #################################################################2
-        elif d2[0] == 3 and d2[1] == 3 and d2[2] == 3 and d2[3] == 3 and kol_stavok >= 0:#d2 d2 d2 d2
-            kol_stavok -= 1
-            balants += sum_stav * 45
-            print("You Vin")
-
-            print(d[0], d[1], d[2], d[3], d[4])
-            print(d1[0], d1[1], d1[2], d1[3], d1[4])
-            print(d2[0], d2[1], d2[2], d2[3], d2[4])
-
-            print(kol_stavok)
-            print(balants)
-        elif d1[0] == 3 and d2[1] == 3 and d2[2] == 3 and d2[3] == 3 and kol_stavok >= 0:#d1 d2 d2 d2
-            kol_stavok -= 1
-            balants += sum_stav * 45
-            print("You Vin")
-
-            print(d[0], d[1], d[2], d[3], d[4])
-            print(d1[0], d1[1], d1[2], d1[3], d1[4])
-            print(d2[0], d2[1], d2[2], d2[3], d2[4])
-
-            print(kol_stavok)
-            print(balants)
-        #################################################################2
-        elif d2[0] == 3 and d2[1] == 3 and d2[2] == 3 and d2[3] == 3 and d2[4] == 3 and kol_stavok >= 0:#d2 d2 d2 d2 d2
-            kol_stavok -= 1
-            balants += sum_stav * 100
-            print("You Vin")
-
-            print(d[0], d[1], d[2], d[3], d[4])
-            print(d1[0], d1[1], d1[2], d1[3], d1[4])
-            print(d2[0], d2[1], d2[2], d2[3], d2[4])
-
-            print(kol_stavok)
-            print(balants)
-        elif d1[0] == 3 and d2[1] == 3 and d2[2] == 3 and d2[3] == 3 and d2[4] == 3 and kol_stavok >= 0:#d1 d2 d2 d2 d2
-            kol_stavok -= 1
-            balants += sum_stav * 100
-            print("You Vin")
-
-            print(d[0], d[1], d[2], d[3], d[4])
-            print(d1[0], d1[1], d1[2], d1[3], d1[4])
-            print(d2[0], d2[1], d2[2], d2[3], d2[4])
-
-            print(kol_stavok)
-            print(balants)
-        elif d1[0] == 3 and d2[1] == 3 and d2[2] == 3 and d2[3] == 3 and d1[4] == 3 and kol_stavok >= 0:#d1 d2 d2 d2 d1
-            kol_stavok -= 1
-            balants += sum_stav * 100
-            print("You Vin")
-
-            print(d[0], d[1], d[2], d[3], d[4])
-            print(d1[0], d1[1], d1[2], d1[3], d1[4])
-            print(d2[0], d2[1], d2[2], d2[3], d2[4])
-
-            print(kol_stavok)
-            print(balants)
-#################################################################
-#################################################################
-#################################################################
 
         else:
             kol_stavok -= 1
             balants -= sum_stav
+            g -= sum_stav  ##################
             print("Losse")
 
             print(d[0], d[1], d[2], d[3], d[4])
@@ -335,8 +373,6 @@ def Game(randint, balants, sum_stav, kol_stavok):
             print(balants)
 
 
-if balants != 0 and balants >= sum_stav:
-    Game(randint, balants, sum_stav, kol_stavok)
+Game( g, balants)
+print(g)
 
-else:
-    print("no many ")
